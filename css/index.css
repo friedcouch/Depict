@@ -1,0 +1,171 @@
+body
+{
+	margin: 0;
+    padding: 0;
+    font-family: 'Goldman', cursive;
+    background-color: #666;
+}
+
+/* Header */
+header
+{
+	width: 100%;
+	height: 70px;
+	background-color: #111;
+}
+
+
+
+#nav img
+{
+	float: left;
+	width: 125px;
+	height: 70px;
+
+}
+
+#nav
+{
+	width: 100%;
+	height: 70px;
+
+}
+
+.navs {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 25px 25px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+#nav .navs:hover {
+  border-bottom: 1px solid #41C6FF;
+}
+
+#signin, #signup
+{
+    float: right;
+}
+
+
+/* body1 */
+#body1
+{
+    width: 100%;
+    height: 797px;
+    background-color: blue;
+}
+
+/* body2 */
+#body2
+{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    border-top: solid 3px #444;
+}
+
+.title
+{
+    width: 100%;
+    height: 100px;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.canvasholder
+{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.canvas
+{
+    width: 25%;
+    height: 575px;
+}
+
+.canvasimage
+{
+    width: 100%;
+    height: 450px;
+    background-color: pink;
+}
+
+.detail
+{
+    width: 100%;
+    height: 125px;
+    background-color: white;
+}
+
+/*FOOTER*/
+footer
+{
+	width: 100%;
+	height: 200px;
+	background-color: #111;
+	text-align: center;
+	color: #666;
+	padding-top: 20px;
+}
+
+.fa 
+{
+	padding: 10px;
+	font-size: 30px;
+	width: 15px;
+	text-align: center;
+	text-decoration: none;
+	margin: 0 10px;
+	border-radius: 50%;
+}
+  
+.fa:hover 
+{
+	opacity: 0.7;
+}
+
+.fa-facebook
+{
+	background: #666;
+	color: #111;
+}
+  
+.fa-twitter
+{
+	background: #666;
+	color: #111;
+}
+  
+.fa-youtube 
+{
+	background: #666;
+	color: #111;
+}
+  
+.fa-instagram 
+{
+	background: #666;
+	color: #111;
+}
+
+@media only screen and (max-width: 850px) 
+{
+    footer
+	{
+		width: 100%;
+		height: auto;
+		padding-bottom: 5px;
+    }
+}
