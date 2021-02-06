@@ -1,0 +1,19 @@
+{
+  "name": "depict",
+  "version": "1.0.0",
+  "description": "test\r u gay\r no u",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/friedcouch/Depict.git"
+  },
+  "author": "Arrow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/friedcouch/Depict/issues"
+  },
+  "homepage": "https://github.com/friedcouch/Depict#readme"
+}
