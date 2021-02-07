@@ -44,7 +44,7 @@ header
   border-bottom: 1px solid #41C6FF;
 }
 
-#signin, #signup
+#signin, #signup, #profile
 {
     float: right;
 }
@@ -109,7 +109,6 @@ header
 {
     width: 100%;
     height: 797px;
-    background-color: blue;
 }
 
 /* body2 */
