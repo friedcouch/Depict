@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/friedcouch/Depict/issues"
   },
-  "homepage": "https://github.com/friedcouch/Depict#readme"
+  "homepage": "https://github.com/friedcouch/Depict#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^1.3.3"
+  }
 }
