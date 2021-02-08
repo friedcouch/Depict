@@ -1,3 +1,13 @@
+import * as database from './database.js'
+const data = {
+  email: 'd@d.d',
+  password: '1234',
+  username: 'ddd'
+}
+
+database.signUp(data.email, data.password, data.username)
+  .then(r => console.log(r))
+
 // Get the modal
 var modalSignUp = document.getElementById("modalSignUp");
 var modalSignIn = document.getElementById("modalSignIn");
