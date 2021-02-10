@@ -1,7 +1,7 @@
-export const signIn = async (email, password) =>
-  request('signIn', { email, password })
+export const userGet = async (email, password) =>
+  request('userGet', { email, password })
 
-export const signUp = async (email, password, username) =>
+export const userCreate = async (email, password, username) =>
   request('userCreate', { email, password, username })
 
 export const request = (path, data) => {
