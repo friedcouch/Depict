@@ -7,14 +7,14 @@ exports.handler = async (event, context) => {
   const data = await supabase.auth
     .signIn({ email, password })
     .then(res => {
-      if (res.error) throw res.error.message
+      if (res.error) throw { error: res.error.message }
       return supabase
         .from('users')
         .select('*')
         .eq('uuid', res.user.id) // res.user.id is the UUID in auth.users
     })
     .then(res => {
-      if (res.error) throw res.error.message
+      if (res.error) throw { error: res.error.message }
       return res.data[0]
     })
     .catch(err => err)
