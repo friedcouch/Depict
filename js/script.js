@@ -4,31 +4,19 @@ import * as database from './database.js'
 var modalSignUp = $("#modalSignUp");
 var modalSignIn = $("#modalSignIn");
 
-// Get the button that opens the modal
-var signup = $("#signup");
-var signin = $("#signin");
-console.log(signup);
-
-// Get the <span> element that closes the modal
-var span1 = $(".close")[0];
-var span2 = $(".close")[1];
-
 // When the user clicks on the button, open the modal
-signup.click(_ => modalSignUp.css("display", "block"))
-signin.click(_ => modalSignIn.css("display", "block"))
-
-signin.onclick = function () {
-  modalSignIn.style.display = "block";
-}
+$('#btn-sign-up').click(_ => modalSignUp.css("display", "block"))
+$('#btn-sign-in').click(_ => modalSignIn.css("display", "block"))
 
 // When the user clicks on <span> (x), close the modal
-span1.onclick = function () {
-  modalSignUp.style.display = "none";
-}
+$('.close').click(_ => {
+  modalSignUp.hide()
+  modalSignIn.hide()
+})
 
-span2.onclick = function () {
-  modalSignIn.style.display = "none";
-}
+// Check if the user clicks on the modal background and closes the form if he does
+$(modalSignUp).click(event => $(event.target).is(modalSignUp) && modalSignUp.hide())
+$(modalSignIn).click(event => $(event.target).is(modalSignIn) && modalSignIn.hide())
 
 modalSignUp.submit(event => {
   event.preventDefault()
@@ -44,7 +32,6 @@ modalSignUp.submit(event => {
       else if (password !== confirmpassword) throw 'Passwords do not match!'
     })
     .catch(err => $('#modalSignUp .error').text(err))
-
 })
 
 modalSignIn.submit(event => {
@@ -57,12 +44,3 @@ modalSignIn.submit(event => {
     })
     .catch(err => $('#modalSignIn .error').text(err))
 })
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modalSignUp) {
-    modalSignUp.style.display = "none";
-  }
-  if (event.target == modalSignIn) {
-    modalSignIn.style.display = "none";
-  }
-}

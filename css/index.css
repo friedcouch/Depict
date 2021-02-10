@@ -1,34 +1,27 @@
-body
-{
-	margin: 0;
+body {
+    margin: 0;
     padding: 0;
     font-family: 'Goldman', cursive;
     background-color: #666;
 }
 
+
 /* Header */
-header
-{
-	width: 100%;
-	height: 70px;
-	background-color: #111;
+header {
+    width: 100%;
+    height: 70px;
+    background-color: #111;
 }
 
-
-
-#nav img
-{
-	float: left;
-	width: 125px;
-	height: 70px;
-
+#nav img {
+    float: left;
+    width: 125px;
+    height: 70px;
 }
 
-#nav
-{
-	width: 100%;
-	height: 70px;
-
+#nav {
+    width: 100%;
+    height: 70px;
 }
 
 .navs {
@@ -41,11 +34,10 @@ header
 }
 
 #nav .navs:hover {
-  border-bottom: 1px solid #41C6FF;
+    border-bottom: 1px solid #41C6FF;
 }
 
-#signin, #signup, #profile
-{
+#btn-sign-in, #btn-sign-up, #profile {
     float: right;
 }
 
@@ -59,61 +51,63 @@ header
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
     color: #999;
     font-size: 25px;
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
     background-color: #333;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
+    /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #222;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
 
 
-  
-  /* The Close Button */
-  .close {
+/* The Close Button */
+.close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover, .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
-  form
-  {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-  }
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-  form label
-  {
-      font-size: 18px;
-  }
+form label {
+    font-size: 18px;
+}
+
 
 /* body1 */
-#body1
-{
+
+#body1 {
     width: 100%;
     height: 797px;
 }
 
+
 /* body2 */
-#body2
-{
+
+#body2 {
     width: 100%;
     height: 700px;
     display: flex;
@@ -121,8 +115,7 @@ header
     border-top: solid 3px #444;
 }
 
-.title
-{
+.title {
     width: 100%;
     height: 100px;
     font-size: 35px;
@@ -132,8 +125,7 @@ header
     font-weight: bold;
 }
 
-.canvasholder
-{
+.canvasholder {
     width: 100%;
     height: 600px;
     display: flex;
@@ -142,83 +134,73 @@ header
     align-items: center;
 }
 
-.canvas
-{
+.canvas {
     width: 25%;
     height: 575px;
 }
 
-.canvasimage
-{
+.canvasimage {
     width: 100%;
     height: 450px;
     background-color: pink;
 }
 
-.detail
-{
+.detail {
     width: 100%;
     height: 125px;
     background-color: white;
 }
 
+
 /*FOOTER*/
-footer
-{
-	width: 100%;
-	height: 200px;
-	background-color: #111;
-	text-align: center;
-	color: #666;
-	padding-top: 20px;
+
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: #111;
+    text-align: center;
+    color: #666;
+    padding-top: 20px;
 }
 
-.fa 
-{
-	padding: 10px;
-	font-size: 30px;
-	width: 15px;
-	text-align: center;
-	text-decoration: none;
-	margin: 0 10px;
-	border-radius: 50%;
-}
-  
-.fa:hover 
-{
-	opacity: 0.7;
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 10px;
+    border-radius: 50%;
 }
 
-.fa-facebook
-{
-	background: #666;
-	color: #111;
-}
-  
-.fa-twitter
-{
-	background: #666;
-	color: #111;
-}
-  
-.fa-youtube 
-{
-	background: #666;
-	color: #111;
-}
-  
-.fa-instagram 
-{
-	background: #666;
-	color: #111;
+.fa:hover {
+    opacity: 0.7;
 }
 
-@media only screen and (max-width: 850px) 
-{
-    footer
-	{
-		width: 100%;
-		height: auto;
-		padding-bottom: 5px;
+.fa-facebook {
+    background: #666;
+    color: #111;
+}
+
+.fa-twitter {
+    background: #666;
+    color: #111;
+}
+
+.fa-youtube {
+    background: #666;
+    color: #111;
+}
+
+.fa-instagram {
+    background: #666;
+    color: #111;
+}
+
+@media only screen and (max-width: 850px) {
+    footer {
+        width: 100%;
+        height: auto;
+        padding-bottom: 5px;
     }
 }
