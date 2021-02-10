@@ -4,6 +4,7 @@ const supabase = createClient(SUPABASE_URL, process.env.SUPABASE_KEY)
 
 exports.handler = async (event, context) => {
   const { email, password } = JSON.parse(event.body)
+  
   const data = await supabase.auth
     .signIn({ email, password })
     .then(res => {
@@ -18,6 +19,7 @@ exports.handler = async (event, context) => {
       return res.data[0]
     })
     .catch(err => err)
+
   return {
     statusCode: 200,
     body: JSON.stringify(data)
