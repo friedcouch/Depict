@@ -25,8 +25,8 @@ exports.handler = async (event, context) => {
       return res.data[0]
     })
     .catch(err => err)
-  
-    return {
+    
+  return {
     statusCode: 200,
     body: JSON.stringify(data)
   }
