@@ -40,32 +40,39 @@ header {
     float: right;
 }
 
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+form, body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form label {
+    font-size: 18px;
+}
+
+.form-container {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80%;
+    background-color: #555;
+    padding: 1em;
+}
+
+#form-bg, .form-container {
+    display: none; /* Initialy hidden */
+    position: fixed;
+}
+
+/* Form background */
+#form-bg {
     left: 0;
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0, 0, 0); /* Fallback color */
     background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
-    color: #999;
-    font-size: 25px;
 }
-
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #333;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #222;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
 
 /* The Close Button */
 .close {
@@ -80,18 +87,6 @@ header {
     text-decoration: none;
     cursor: pointer;
 }
-
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-form label {
-    font-size: 18px;
-}
-
 
 /* body1 */
 #body1 {

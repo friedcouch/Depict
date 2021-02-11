@@ -1,108 +1,112 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Depict</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/index.css">
-        <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body>
-        <div class="container">
-            <header>
-                <div id = "nav">
-                    <a href="index.html" class="navs">HOME</a>
-                    <a href="#" class="navs">DESIGN1</a>
-                    <a href="#" class="navs">DESIGN2</a>
-                    <a href="#" class="navs">ART GALLERY</a>
-                    <a href="#" class="navs" id="btn-sign-in">SIGN IN</a>
-                    <a href="#" class="navs" id="btn-sign-up">SIGN UP</a>
-                </div>
-            </header>
-            <div id="modalSignUp" class="modal">
-                <!-- Sign up -->
-                <div class="modal-content">
-                    <span class="close">&times;</span><br>
-                    <form>
-                        Register an account now!<br><br>
-                        <label>Username: </label>
-                        <input type="text" class="username" id="username" required><br>
-                        <label>Email: </label>
-                        <input type="email" class="email" id="email" required><br>
-                        <label>Password: </label>
-                        <input type="password" class="password" id="password" required><br>
-                        <label>Confirm Password: </label>
-                        <input type="password" class="password" id="confirmpassword" required><br>
-                        <span class="error"></span>
-                        <input type="submit">
-                    </form>
-                </div>
-            </div>
-            <div id="modalSignIn" class="modal">
-                <!-- Sign In -->
-                <div class="modal-content">
-                    <span class="close">&times;</span><br>
-                    <form>
-                        Sign in<br><br>
-                        <label>Username: </label>
-                        <input type="text" class="username"><br>
-                        <label>Password: </label>
-                        <input type="password" class="password"><br>
-                        <span class="error"></span>
-                        <input type="submit">
-                    </form>
-                </div>
-            </div>
 
-            <div id="body1">
-                <img src="img/wallpaper1.jpg" alt="wallpaper">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Depict</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div>
+        <header>
+            <div id="nav">
+                <a href="index.html" class="navs">HOME</a>
+                <a href="#" class="navs">DESIGN1</a>
+                <a href="#" class="navs">DESIGN2</a>
+                <a href="#" class="navs">ART GALLERY</a>
+                <a href="#" class="navs" id="btn-sign-in">SIGN IN</a>
+                <a href="#" class="navs" id="btn-sign-up">SIGN UP</a>
             </div>
-            <div id="body2">
-                <div class="title">CATEGORY 1</div>
-                <div class="canvasholder">
-                    <div class="canvas">
-                        <div class="canvasimage"></div>
-                        <div class="detail"></div>
-                    </div>
-                    <div class="canvas">
-                        <div class="canvasimage"></div>
-                        <div class="detail"></div>
-                    </div>
-                    <div class="canvas">
-                        <div class="canvasimage"></div>
-                        <div class="detail"></div>
-                    </div>
-                </div>
+        </header>
+    </div>
+
+    <div id="form-bg"></div>
+    <!-- Sign up -->
+    <div id="form-sign-up-container" class="form-container">
+        <span class="close">&times;</span><br>
+        <form id="form-sign-up">
+            Register an account now!<br><br>
+            <label>Username: </label>
+            <input type="text" class="username" id="username" required><br>
+            <label>Email: </label>
+            <input type="email" class="email" id="email" required><br>
+            <label>Password: </label>
+            <input type="password" class="password" id="password" required><br>
+            <label>Confirm Password: </label>
+            <input type="password" class="password" id="confirmpassword" required><br>
+            <span class="error"></span>
+            <input type="submit">
+        </form>
+    </div>
+    
+    <!-- Sign In -->
+    <div id="form-sign-in-container" class="form-container">
+        <span class="close">&times;</span><br>
+        <form id="form-sign-in">
+            Sign in<br><br>
+            <label>Username: </label>
+            <input type="text" class="username"><br>
+            <label>Password: </label>
+            <input type="password" class="password"><br>
+            <span class="error"></span>
+            <input type="submit">
+        </form>
+    </div>
+
+    <div id="body1">
+        <img src="img/wallpaper1.jpg" alt="wallpaper">
+    </div>
+    <div id="body2">
+        <div class="title">CATEGORY 1</div>
+        <div class="canvasholder">
+            <div class="canvas">
+                <div class="canvasimage"></div>
+                <div class="detail"></div>
             </div>
-            <div id="body2">
-                <div class="title">CATEGORY 2</div>
-                <div class="canvasholder">
-                    <div class="canvas">
-                        <div class="canvasimage"></div>
-                        <div class="detail"></div>
-                    </div>
-                    <div class="canvas">
-                        <div class="canvasimage"></div>
-                        <div class="detail"></div>
-                    </div>
-                    <div class="canvas">
-                        <div class="canvasimage"></div>
-                        <div class="detail"></div>
-                    </div>
-                </div>
+            <div class="canvas">
+                <div class="canvasimage"></div>
+                <div class="detail"></div>
             </div>
-            <footer>
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-youtube"></a>
-                <a href="#" class="fa fa-instagram"></a><br><br>
-                <p>© 2020-2021 Depict, Inc. OneFood<br> any associated logos are trademarks, service marks, and/or registered<br> trademarks of Depict, Inc.</p>
-            </footer>
+            <div class="canvas">
+                <div class="canvasimage"></div>
+                <div class="detail"></div>
+            </div>
         </div>
-        <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
-        <script type="module" src="js/script.js" async defer></script>
-    </body>
+    </div>
+    <div id="body2">
+        <div class="title">CATEGORY 2</div>
+        <div class="canvasholder">
+            <div class="canvas">
+                <div class="canvasimage"></div>
+                <div class="detail"></div>
+            </div>
+            <div class="canvas">
+                <div class="canvasimage"></div>
+                <div class="detail"></div>
+            </div>
+            <div class="canvas">
+                <div class="canvasimage"></div>
+                <div class="detail"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a><br><br>
+        <p>© 2020-2021 Depict, Inc. OneFood<br> any associated logos are trademarks, service marks, and/or
+            registered<br> trademarks of Depict, Inc.</p>
+    </footer>
+    </div>
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script type="module" src="js/script.js" async defer></script>
+</body>
+
 </html>

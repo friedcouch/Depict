@@ -1,24 +1,40 @@
 import * as database from './database.js'
 
-// Get the modal
-var modalSignUp = $("#modalSignUp");
-var modalSignIn = $("#modalSignIn");
+// database.canvasCreate('test2', { canvas: 'yes' }, 2)
+//   .then(data => {
+//     console.log(res)
+//     if (res.error) throw res.error
+//   })
+//   .catch(err => console.log(err))
 
-// When the user clicks on the button, open the modal
-$('#btn-sign-up').click(_ => modalSignUp.css("display", "block"))
-$('#btn-sign-in').click(_ => modalSignIn.css("display", "block"))
+// database.canvasGet()
+//   .then(data => {
+//     for (const canvas of data) {
+//       console.log(canvas)
+//     }
+//   })
 
-// When the user clicks on <span> (x), close the modal
-$('.close').click(_ => {
-  modalSignUp.hide()
-  modalSignIn.hide()
+const formBg = $("#form-bg")
+const signUpForm = $("#form-sign-up");
+const signInForm = $("#form-sign-in");
+const signUpFormContainer = $('#form-sign-up-container')
+const signInFormContainer = $('#form-sign-in-container')
+
+// When the user clicks on the button, open the form
+$('#btn-sign-up').click(_ => {
+  signUpFormContainer.show()
+  formBg.show()
+})
+$('#btn-sign-in').click(_ => {
+  signInFormContainer.show()
+  formBg.show()
 })
 
-// Check if the user clicks on the modal background and closes the form if he does
-$(modalSignUp).click(event => $(event.target).is(modalSignUp) && modalSignUp.hide())
-$(modalSignIn).click(event => $(event.target).is(modalSignIn) && modalSignIn.hide())
+// When the user clicks on <span> (x) or form background, close the form
+$('.close').click(_ => hideForm())
+$(formBg).click(_ => hideForm())
 
-modalSignUp.submit(event => {
+$(signUpForm).submit(event => {
   event.preventDefault()
   const username = event.target[0].value
   const email = event.target[1].value
@@ -31,10 +47,10 @@ modalSignUp.submit(event => {
       if (res.error) throw res.error
       else if (password !== confirmpassword) throw 'Passwords do not match!'
     })
-    .catch(err => $('#modalSignUp .error').text(err))
+    .catch(err => $('#form-sign-up .error').text(err))
 })
 
-modalSignIn.submit(event => {
+$(signInForm).submit(event => {
   event.preventDefault()
   const email = event.target[0].value
   const password = event.target[1].value
@@ -42,5 +58,11 @@ modalSignIn.submit(event => {
     .then(res => {
       if (res.error) throw res.error
     })
-    .catch(err => $('#modalSignIn .error').text(err))
+    .catch(err => $('#form-sign-in .error').text(err))
 })
+
+const hideForm = () => {
+  formBg.hide()
+  signUpFormContainer.hide()
+  signInFormContainer.hide()
+}
