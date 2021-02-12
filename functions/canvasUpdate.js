@@ -14,7 +14,7 @@ exports.handler = async (event, context) => {
 
   if (!canvas) // canvasId supplied does not exist
     return {
-      statusCode: 404,
+      statusCode: 400,
       body: JSON.stringify({ error: `canvas with canvas_id: ${canvasId} not found`})
     }
 

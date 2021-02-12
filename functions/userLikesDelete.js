@@ -22,7 +22,7 @@ exports.handler = async (event, context) => {
     .catch(err => {
       console.log(err)
       return {
-        statusCode: 404,
+        statusCode: 400,
         body: JSON.stringify(err)
       }
     })
