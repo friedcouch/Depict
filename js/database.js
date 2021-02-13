@@ -16,6 +16,21 @@ export const canvasUpdate = async (canvasId) =>
 export const canvasDelete = async (canvasId) =>
   request('canvasDelete', { canvasId })
 
+export const userLikesCreate = async (userId, canvasId) =>
+  request('userLikesCreate', { userId, canvasId })
+
+export const userLikesGet = async (userId, canvasId) =>
+  request('userLikesGet', { userId, canvasId })
+
+export const userLikesDelete = async (userId, canvasId) =>
+  request('userLikesDelete', { userId, canvasId })
+
+export const userBadgesCreate = async (userId, badgeId) =>
+  request('userBadgesCreate', { userId, badgeId })
+
+export const userBadgesGet = async (userId) =>
+  request('userBadgesGet', { userId })
+
 export const request = (path, data) => {
   return fetch(`../.netlify/functions/${path}`, {
     method: 'POST',
