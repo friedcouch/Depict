@@ -8,8 +8,8 @@ exports.handler = async (event, context) => {
   const data = await supabase
     .from('users_likes')
     .select('*', { count: 'exact' })
-    .eq(userId ? 'user_id' : '', userId) // Filter to get a user's canvasses if userId is specified
-    .eq(canvasId ? 'canvas_id' : '', canvasId) // Filter to get a user's canvasses if userId is specified
+    .eq(userId ? 'user_id' : '', userId) // Get a user's canvasses if userId is specified
+    .eq(canvasId ? 'canvas_id' : '', canvasId) // Get users who liked the canvas with specified canvasId
     .then(res => { 
       if (res.error) throw { error: res.error.message }
       return res
