@@ -1,15 +1,19 @@
-body
-{
-	margin: 0 auto;
-    font-family: 'Goldman', cursive;
+body {
+    margin: 0 auto;
     max-width: 1920px;
-    color: #FFF;
+    font-family: 'Goldman', cursive;
 }
 
 html
 {
     --top-spacing: 70px;
     margin: var(--top-spacing) auto;
+}
+
+section
+{
+    width: 100%;
+    background-color: #666;
 }
 
 /* Header */
@@ -102,101 +106,17 @@ form label {
     cursor: pointer;
 }
 
+/* body1 to store canvas */
 .body1
 {
     width: 100%;
-    height: auto;
-    background-color: #333;
-}
-
-.profile
-{
-    width: 100%;
-    height: auto;
-}
-
-.usericon
-{
-    width: 100%;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.usericon img
-{
-    height: 175px;
-}
-
-.username
-{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-}
-
-.totallikes
-{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-}
-
-.badges-container
-{
-    width: 100%;
-    height: auto;
-}
-
-.title
-{
-    width: 100%;
-    height: 75px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-}
-
-.badges
-{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.canvascontainer
-{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.canvastitle
-{
-    width: 100%;
-    height: 75px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.canvas-row
-{
-    width: 100%;
-    height: auto;
+    min-height: 900px;
+    background-color: #1A1A1D;
     display: flex;
     justify-content: space-evenly;
+    padding: 50px 0 50px 0;
+    flex-wrap: wrap;
+    column-count: 3;
 }
 
 .cardbox
@@ -206,7 +126,7 @@ form label {
     background-color: #555;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    border: 1px solid;
     padding: 10px;
     box-shadow: 5px 10px 18px #2A2A2D;
     flex: 0 0 24%;
@@ -224,65 +144,36 @@ form label {
     height: 50px;
 }
 
-
-
-/*FOOTER*/
-footer
-{
-	width: 100%;
-	height: 200px;
-	background-color: #111;
-	text-align: center;
-	color: #666;
-	padding-top: 20px;
+/* FOOTER */
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: #111;
+    text-align: center;
+    color: #666;
+    padding-top: 20px;
 }
 
-.fa 
-{
-	padding: 10px;
-	font-size: 30px;
-	width: 15px;
-	text-align: center;
-	text-decoration: none;
-	margin: 0 10px;
-	border-radius: 50%;
-}
-  
-.fa:hover 
-{
-	opacity: 0.7;
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 10px;
+    border-radius: 50%;
+    background: #666;
+    color: #111;
 }
 
-.fa-facebook
-{
-	background: #666;
-	color: #111;
-}
-  
-.fa-twitter
-{
-	background: #666;
-	color: #111;
-}
-  
-.fa-youtube 
-{
-	background: #666;
-	color: #111;
-}
-  
-.fa-instagram 
-{
-	background: #666;
-	color: #111;
+.fa:hover {
+    opacity: 0.7;
 }
 
-@media only screen and (max-width: 850px) 
-{
-    footer
-	{
-		width: 100%;
-		height: auto;
-		padding-bottom: 5px;
+@media only screen and (max-width: 850px) {
+    footer {
+        width: 100%;
+        height: auto;
+        padding-bottom: 5px;
     }
 }

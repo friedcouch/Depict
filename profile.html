@@ -10,34 +10,38 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="profile-container">
-        <div class="left-wrapper">
-            <div class="welcome">
-                Welcome back,<br>
-                <div id="name"></div>
-            </div>
-            
-            <div class="left-wrapper-content">
-                <div class="badgetitle">BADGES</div>
-                <div id="badges">
-                    2019
-                    <div id="badge2019"></div>
-                    2020
-                    <div id="badge2020"></div>
-                    2021
-                    <div id="badge2021"></div>
-                </div>
+    <header id="header-nav">
+        <div id="nav">
+            <a href="index.html" class="navs">HOME</a>
+            <a href="canvas.html" class="navs">CANVAS</a>
+            <a href="#" class="navs" id="btn-sign-in">SIGN IN</a>
+            <a href="#" class="navs" id="btn-sign-up">SIGN UP</a>
+        </div>
+    </header>
+    <div class="body1">
+        <div class="profile">
+            <div class="usericon"><img src="img/pfp.png"></div>
+            <div class="username">username</div>
+            <div class="totallikes">Total Likes</div>
+            <div class="badges-container">
+                <div class="title">Badges</div>
+                <div class="badges">as</div>
             </div>
         </div>
-        <div class="right-wrapper">
-            <div class="right-box">
-                <div class="right-indiv">
-                    <div class="right-indiv-header">INFORMATION</div>
-                    <div class="right-indiv-content"></div>
+        <div class="canvascontainer">
+            <div class="canvastitle">CANVAS</div>
+            <div class="canvas-row">
+                <div class="cardbox">
+                    <div class="canvas"></div>
+                    <div class="information"></div>
                 </div>
-                <div class="right-indiv">
-                    <div class="right-indiv-header">CANVAS</div>
-                    <div class="right-indiv-content"></div>
+                <div class="cardbox">
+                    <div class="canvas"></div>
+                    <div class="information"></div>
+                </div>
+                <div class="cardbox">
+                    <div class="canvas"></div>
+                    <div class="information"></div>
                 </div>
             </div>
         </div>
@@ -49,5 +53,7 @@
         <a href="#" class="fa fa-instagram"></a><br><br>
         <p>© 2020-2021 Depict, Inc. OneFood<br> any associated logos are trademarks, service marks, and/or registered<br> trademarks of Depict, Inc.</p>
   </footer>
+  <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
+  <script type="module" src="js/script.js" async defer></script>
 </body>
 </html>

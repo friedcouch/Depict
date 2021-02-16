@@ -1,7 +1,19 @@
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
+    max-width: 1920px;
     font-family: 'Goldman', cursive;
+    
+}
+
+html
+{
+    --top-spacing: 70px;
+    margin: var(--top-spacing) auto;
+}
+
+section
+{
+    width: 100%;
     background-color: #666;
 }
 
@@ -10,6 +22,10 @@ header {
     width: 100%;
     height: 70px;
     background-color: #111;
+    position: fixed;
+    top: 0;
+    max-width: 1920px;
+    transition: top 0.3s;
 }
 
 #nav img {
@@ -40,7 +56,7 @@ header {
     float: right;
 }
 
-form, body {
+form, section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,9 +70,12 @@ form label {
 .form-container {
     top: 50%;
     transform: translateY(-50%);
-    width: 80%;
-    background-color: #555;
+    border-radius: 20px;
+    width: 60%;
+    background-color: #222;
     padding: 1em;
+    padding-top: 0.4em;
+    color: #FFF;
 }
 
 #form-bg, .form-container {
@@ -71,7 +90,7 @@ form label {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
 }
 
 /* The Close Button */
@@ -91,55 +110,50 @@ form label {
 /* body1 */
 #body1 {
     width: 100%;
-    height: 797px;
+    height: 700px;
+    background-color: #1A1A1D;
+    color: #950740;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#body1 p{
+    color: #6F2232;
+    font-size: 20px;
+    width: 40%;
+    text-align: center;
+}
+
+#body1 h3{
+    font-size: 35px;
 }
 
 
 /* body2 */
 #body2 {
     width: 100%;
-    height: 700px;
-    display: flex;
-    flex-direction: column;
-    border-top: solid 3px #444;
+    height: 800px;
+    background-color: #222;
 }
 
-.title {
+.title
+{
     width: 100%;
     height: 100px;
-    font-size: 35px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-weight: bold;
-}
-
-.canvasholder {
-    width: 100%;
-    height: 600px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    color: #FFF;
+    font-size: 35px;
     align-items: center;
 }
 
-.canvas {
-    width: 25%;
-    height: 575px;
-}
-
-.canvasimage {
+.content
+{
     width: 100%;
-    height: 450px;
-    background-color: pink;
+    height: 700px;
 }
-
-.detail {
-    width: 100%;
-    height: 125px;
-    background-color: white;
-}
-
 
 /* FOOTER */
 footer {

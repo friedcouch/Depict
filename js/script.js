@@ -14,6 +14,17 @@ import * as database from './database.js'
 //     }
 //   })
 
+var prevScrollPos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollPos > currentScrollPos) {
+    document.getElementById("header-nav").style.top = "0";
+  } else {
+    document.getElementById("header-nav").style.top = "-80px";
+  }
+  prevScrollPos = currentScrollPos;
+}
+
 const formBg = $("#form-bg")
 const signUpForm = $("#form-sign-up");
 const signInForm = $("#form-sign-in");
@@ -46,6 +57,7 @@ $(signUpForm).submit(event => {
       console.log(res)
       if (res.error) throw res.error
       else if (password !== confirmpassword) throw 'Passwords do not match!'
+      $('#form-sign-up .error').text('')
     })
     .catch(err => $('#form-sign-up .error').text(err))
 })
