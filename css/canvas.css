@@ -1,179 +1,31 @@
-body {
-    margin: 0 auto;
-    max-width: 1920px;
-    font-family: 'Goldman', cursive;
-}
+@import 'index.css';
 
-html
-{
-    --top-spacing: 70px;
-    margin: var(--top-spacing) auto;
-}
-
-section
-{
-    width: 100%;
-    background-color: #666;
-}
-
-/* Header */
-header {
-    width: 100%;
-    height: 70px;
-    background-color: #111;
-    position: fixed;
-    top: 0;
-    max-width: 1920px;
-    transition: top 0.3s;
-}
-
-#nav img {
-    float: left;
-    width: 125px;
-    height: 70px;
-}
-
-#nav {
-    width: 100%;
-    height: 70px;
-}
-
-.navs {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 25px 25px;
-    text-decoration: none;
-    font-size: 15px;
-}
-
-#nav .navs:hover {
-    border-bottom: 1px solid #41C6FF;
-}
-
-#btn-sign-in, #btn-sign-up, #profile {
-    float: right;
-}
-
-form, section {
+#canvasses {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-form label {
-    font-size: 18px;
-}
-
-.form-container {
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 20px;
-    width: 60%;
-    background-color: #222;
-    padding: 1em;
-    padding-top: 0.4em;
-    color: #FFF;
-}
-
-#form-bg, .form-container {
-    display: none; /* Initialy hidden */
-    position: fixed;
-}
-
-/* Form background */
-#form-bg {
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
-}
-
-/* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover, .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* body1 to store canvas */
-.body1
-{
+    flex-flow: row wrap;
     width: 100%;
-    min-height: 900px;
-    background-color: #1A1A1D;
+}
+
+.post {
+    width: 47%;
+    margin: 1.5%;
+}
+.post * {
+    color: #fff;
+}
+
+.canvas-container svg {
+    width: 100%;
+    height: auto
+}
+
+.canvas-name {
+    width: 100%;
+    font-size: 1.5em;
+}
+  
+  .user-info {
     display: flex;
-    justify-content: space-evenly;
-    padding: 50px 0 50px 0;
-    flex-wrap: wrap;
-    column-count: 3;
-}
-
-.cardbox
-{
-    width: 20%;
-    height: 550px;
-    background-color: #555;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid;
-    padding: 10px;
-    box-shadow: 5px 10px 18px #2A2A2D;
-    flex: 0 0 24%;
-}
-
-.canvas
-{
-    width: 100%;
-    height: 500px;
-}
-
-.information
-{
-    width: 100%;
-    height: 50px;
-}
-
-/* FOOTER */
-footer {
-    width: 100%;
-    height: 200px;
-    background-color: #111;
-    text-align: center;
-    color: #666;
-    padding-top: 20px;
-}
-
-.fa {
-    padding: 10px;
-    font-size: 30px;
-    width: 15px;
-    text-align: center;
-    text-decoration: none;
-    margin: 0 10px;
-    border-radius: 50%;
-    background: #666;
-    color: #111;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-@media only screen and (max-width: 850px) {
-    footer {
-        width: 100%;
-        height: auto;
-        padding-bottom: 5px;
-    }
-}
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
