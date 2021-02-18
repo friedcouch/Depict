@@ -1,8 +1,9 @@
 body {
     margin: 0 auto;
     max-width: 1920px;
-    font-family: 'Goldman', cursive;
-    
+    /* font-family: 'Goldman', cursive; */
+    font-family: 'Consolas';
+    background-color: #1A1A1D;
 }
 
 html
@@ -52,8 +53,12 @@ header {
     border-bottom: 1px solid #41C6FF;
 }
 
-#btn-sign-in, #btn-sign-up, #profile {
+#btn-sign-in, #btn-sign-up, #btn-sign-out, #btn-profile {
     float: right;
+}
+
+#btn-sign-out, #btn-profile {
+    display: none;
 }
 
 form, section {
