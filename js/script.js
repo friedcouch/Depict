@@ -92,6 +92,40 @@ $(signUpForm).submit(event => {
     .catch(err => $('#form-sign-up .error').text(err))
 })
 
+// signUpForm.submit(event => {
+//   event.preventDefault()
+//   const username = event.target[0].value
+//   const email = event.target[1].value
+//   const password = event.target[2].value
+//   signUp(email, password, username)
+//     .then(res => {
+//       if (res.error) throw res.error
+//       localStorage.user = JSON.stringify(res)
+//       hideLoginButtons()
+//       // window.location.reload()
+//     })
+//     .catch(err => $('#form-sign-up .error').text(err))
+// })
+
+// signInForm.submit(async (event) => {
+//   event.preventDefault()
+//   const email = event.target[0].value
+//   const password = event.target[1].value
+//   signIn(email, password)
+//     .then(res => {
+//       if (res.error) throw res.error
+//       localStorage.user = JSON.stringify(res)
+//       hideLoginButtons()
+//       window.location.reload()
+//       return getCreatedRecipe(res.user.id)
+//     })
+//     .then(recipeArr => {
+//       const recipeObjs = Object.fromEntries(recipeArr.map(r => [r.id, r]))
+//       displayRecipes(recipeObjs)
+//       localStorage.recipes = JSON.stringify(recipeObjs)
+//     })
+//     .catch(err => $('#form-sign-in .error').text(err))
+// })
 $(signInForm).submit(event => {
   event.preventDefault()
   const email = event.target[0].value
