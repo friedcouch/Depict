@@ -1,59 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/profile.css">
     <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
-<body>
+
+<body class="profile">
     <header id="header-nav">
         <div id="nav">
             <a href="index.html" class="navs">HOME</a>
-            <a href="canvas.html" class="navs">CANVAS</a>
+            <a href="#" class="navs" id="btn-create-canvas">CREATE CANVAS</a>
             <a href="#" class="navs" id="btn-sign-in">SIGN IN</a>
             <a href="#" class="navs" id="btn-sign-up">SIGN UP</a>
+            <a href="#" class="navs" id="btn-sign-out">SIGN OUT</a>
+            <a href="#" class="navs" id="btn-profile">PROFILE</a>
         </div>
     </header>
-    <div class="body1">
+    <section>
+        <div id="form-bg"></div>
+
+        <div style="display: none" id="loader">
+            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_zq0pszbe.json" background="transparent"
+                speed="3" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+        </div>
+        
+        <!-- Create canvas -->
+        <div id="create-canvas-container" class="create-canvas-container">
+            <span class="close">&times;</span><br>
+            <div id="canvas" class="post-container">
+                <div id="edit-canvas-container">
+                </div>
+
+                <div id="settings-container">
+                    <form action="" id="canvas-name-form">
+                        <input id='canvas-name' type="text" placeholder="name" required><br />
+                    </form>
+                    <div id="btn-settings-subpage-container">
+                        <button id="btn-path-settings">Settings</button>
+                        <button id="btn-path-overview">Paths</button>
+                    </div>
+
+                    <div id="settings-subpage-container">
+
+                        <div id="path-settings">
+
+                            <form id="edit-canvas" class="hidden popup" data-just-opened="false" data-is-open="false"
+                                data-is-new="false" data-recipe-id="">
+
+                                <label for="canvas-max-anchors">Max anchors: </label>
+                                <input id='canvas-max-anchors' type="number" value="5" min="1" max="500" required><br />
+
+                                <label for="canvas-is-closed">Closed </label>
+                                <input id='canvas-is-closed' type="checkbox" checked><br />
+
+                                <label for="canvas-is-curved">Curved </label>
+                                <input id='canvas-is-curved' type="checkbox" checked><br />
+
+                                <div id="fill-colour">
+                                    <label>Fill colour</label>
+                                    <ul class="settings"></ul>
+                                    <button type="button" class="add">add</button>
+                                </div>
+                                <div id="stroke-colour">
+                                    <label>Stroke colour</label>
+                                    <ul class="settings"></ul>
+                                    <button type="button" class="add">add</button>
+                                </div>
+                            </form>
+
+                        </div>
+
+                        <div id="path-overview">
+                            <ul class="settings"></ul>
+                        </div>
+
+                    </div>
+
+                    <div id="btn-submit-container">
+                        <input type="submit" value="generate" form="edit-canvas" />
+                        <input type="submit" value="post" form="canvas-name-form" />
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sign up -->
+        <div id="form-sign-up-container" class="form-container">
+            <span class="close">&times;</span><br>
+            <form id="form-sign-up">
+                Register an account now!<br><br>
+                <label>Username: </label>
+                <input type="text" class="username" required><br>
+                <label>Email: </label>
+                <input type="email" class="email" id="email" required><br>
+                <label>Password: </label>
+                <input type="password" class="password" id="password" required><br>
+                <label>Confirm Password: </label>
+                <input type="password" class="password" id="confirmpassword" required><br>
+                <span class="error"></span>
+                <input type="submit">
+            </form>
+        </div>
+
+        <!-- Sign In -->
+        <div id="form-sign-in-container" class="form-container">
+            <span class="close">&times;</span><br>
+            <form id="form-sign-in">
+                Sign in<br><br>
+                <label>Username: </label>
+                <input type="text" class="username"><br>
+                <label>Password: </label>
+                <input type="password" class="password"><br>
+                <span class="error"></span>
+                <input type="submit">
+            </form>
+        </div>
         <div class="profile">
             <div class="usericon"><img src="img/pfp.png"></div>
-            <div class="username">username</div>
-            <div class="totallikes">Total Likes</div>
-            <div class="badges-container">
-                <div class="title">Badges</div>
-                <div class="badges">as</div>
+            <div id="username">username</div>
+            <div id="total-likes">
+                <img src="img/heart.svg">
+                <span></span>
             </div>
         </div>
-        <div class="canvascontainer">
-            <div class="canvastitle">CANVAS</div>
-            <div class="canvas-row">
-                <div class="cardbox">
-                    <div class="canvas"></div>
-                    <div class="information"></div>
-                </div>
-                <div class="cardbox">
-                    <div class="canvas"></div>
-                    <div class="information"></div>
-                </div>
-                <div class="cardbox">
-                    <div class="canvas"></div>
-                    <div class="information"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+        <div id="canvasses"></div>
+    </section>
     <footer>
         <a href="#" class="fa fa-facebook"></a>
         <a href="#" class="fa fa-twitter"></a>
         <a href="#" class="fa fa-youtube"></a>
         <a href="#" class="fa fa-instagram"></a><br><br>
-        <p>© 2020-2021 Depict, Inc. OneFood<br> any associated logos are trademarks, service marks, and/or registered<br> trademarks of Depict, Inc.</p>
-  </footer>
-  <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
-  <script type="module" src="js/script.js" async defer></script>
+        <p>© 2020-2021 Depict, Inc. OneFood<br> any associated logos are trademarks, service marks, and/or
+            registered<br> trademarks of Depict, Inc.</p>
+    </footer>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script src="js/two.js"></script>
+    <script type="module" src="js/script.js" async defer></script>
+    <script type="module" src="js/canvas.js" async defer></script>
 </body>
+
 </html>

@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/profile.css">
     <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 
-<body class="canvas">
+<body class="other-profile">
     <header id="header-nav">
         <div id="nav">
             <a href="index.html" class="navs">HOME</a>
@@ -97,7 +98,7 @@
             <form id="form-sign-up">
                 Register an account now!<br><br>
                 <label>Username: </label>
-                <input type="text" class="username" id="username" required><br>
+                <input type="text" class="username" required><br>
                 <label>Email: </label>
                 <input type="email" class="email" id="email" required><br>
                 <label>Password: </label>
@@ -114,7 +115,7 @@
             <span class="close">&times;</span><br>
             <form id="form-sign-in">
                 Sign in<br><br>
-                <label>Email: </label>
+                <label>Username: </label>
                 <input type="text" class="username"><br>
                 <label>Password: </label>
                 <input type="password" class="password"><br>
@@ -122,11 +123,13 @@
                 <input type="submit">
             </form>
         </div>
-        <div id="introduction">
-            <h3>DEPICT</h3>
-            <p>Welcome to Depict where we offer you a whole new experience of social media related kind of ART creation.
-                We also provide with exploration of other people artworks which you will be able to appreciate and gain
-                inspiration from what they have done</p>
+        <div class="profile">
+            <div class="usericon"><img src="img/pfp.png"></div>
+            <div id="username">username</div>
+            <div id="total-likes">
+                <img src="img/heart.svg">
+                <span></span>
+            </div>
         </div>
         <div id="canvasses"></div>
     </section>
