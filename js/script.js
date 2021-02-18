@@ -1,46 +1,33 @@
 import * as database from './database.js'
 
-var prevScrollPos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollPos > currentScrollPos) {
-    document.getElementById("header-nav").style.top = "0";
-  } else {
-    document.getElementById("header-nav").style.top = "-80px";
-  }
-  prevScrollPos = currentScrollPos;
+$(document).ready(() => {
+  if ($('body').hasClass('canvas')) loadPosts()
+})
+const loadPosts = () => {
+  database.canvasGet()
+    .then(data => {
+      if (data.error) throw data.error
+      for (const canvas of data) {
+        console.log(canvas)
+        $('#canvasses').append(`
+          <div class="post" data-canvas-id="${canvas.canvas_id} data-user-id="${canvas.user.user_id}">
+            <div class="canvas-container">${canvas.image}</div>
+            
+            <div class="user-info">
+              <span class="canvas-name">${canvas.name}</span><br />
+              <span class="username">${canvas.user.username}</span>
+              <div class="like-container">
+                <button class="like">like</button>
+                <span class="like-count">${canvas.like_count}</span>
+              </div>
+            </div>
+          </div>
+        `)
+      }
+      console.log(data)
+    })
+    .catch(err => console.error(err))
 }
-
-// database.userCreate('qwert@ab.c4', '1234', 'qwerty4')
-// .then(data => {
-//   console.log(data)
-//   if (data.error) throw data.error
-// })
-// .catch(err => console.log(err))
-
-database.userBadgesGet(11)
-// database.userBadgesCreate(1, 2)
-// database.request('userLikesCreate', { userId: 2, canvasId: 100 })
-// database.request('userLikesGet', { userId: 1 })
-// database.request('userLikesDelete', { userId: 1, canvasId: 8 })
-  .then(data => {
-    console.log(data)
-    if (data.error) throw data.error
-  })
-  .catch(err => console.log(err))
-// database.canvasCreate('test2', { canvas: 'yes' }, 2)
-//   .then(data => {
-//     console.log(res)
-//     if (res.error) throw res.error
-//   })
-//   .catch(err => console.log(err))
-
-// database.canvasGet()
-//   .then(data => {
-//     for (const canvas of data) {
-//       console.log(canvas)
-//     }
-//   })
 
 var prevScrollPos = window.pageYOffset;
 window.onscroll = function() {
@@ -59,6 +46,21 @@ const signInForm = $("#form-sign-in");
 const signUpFormContainer = $('#form-sign-up-container')
 const signInFormContainer = $('#form-sign-in-container')
 
+const hideLoginButtons = () => {
+  $('#btn-sign-up').hide()
+  $('#btn-sign-in').hide()
+  $('#btn-sign-out').show()
+  $('#btn-profile').show()
+}
+
+const showLoginButtons = () => {
+  $('#btn-sign-up').show()
+  $('#btn-sign-in').show()
+  $('#btn-sign-out').hide()
+  $('#btn-profile').hide()
+}
+
+hideLoginButtons()
 // When the user clicks on the button, open the form
 $('#btn-sign-up').click(_ => {
   signUpFormContainer.show()
