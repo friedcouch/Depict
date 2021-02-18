@@ -1,0 +1,136 @@
+#create-canvas-container {
+  width: 80%;
+}
+
+#canvas-name {
+  width: 94%;
+  padding: 0.5em 2.55%;
+}
+
+#settings-container, #edit-canvas-container {
+  flex: 1;
+  height: 400px;
+}
+
+#settings-container {
+  display: flex;
+  flex-flow: column;
+  padding-right: 0;
+}
+
+#edit-canvas-container svg {
+  height: 100%;
+  width: 100%;
+}
+
+#settings-subpage-container {
+  display: flex;
+  flex-flow: row;
+  flex-grow: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 1em 0 0 1em;
+}
+
+#settings-subpage-container > * {
+  width: 100%;
+  height: 100%;
+  animation: fade 1s;
+}
+
+#btn-settings-subpage-container {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 0.01%;
+}
+
+#btn-settings-subpage-container button {
+  width: 50%;
+  border-radius: 0;
+}
+
+#btn-path-settings {
+  background-color: #f8f8f8;
+}
+
+#btn-path-overview {
+  background-color: #eee;
+}
+
+#path-overview {
+  display: none;
+}
+
+.post-container {
+  display: flex;
+}
+
+.colour-input-container input {
+  padding: 0;
+}
+
+input[type="number"] {
+  width: 3em;
+}
+input[type="color"] {
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;	
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border-radius: 100%;
+  border: none;
+  outline: none;
+}
+
+#btn-submit-container {
+  padding: 0 0 1em 1em;
+}
+
+button {
+  border-width: 0;
+  border-style: none;
+  border-radius: 2px;
+  padding: 0.25em 0.5em;
+  margin: 0.125em;
+  width: fit-content;
+  height: fit-content;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+li > * {
+  margin-right: 0.4em;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media only screen and (max-width: 600px) {
+  .create-canvas-container {
+    height: 90%;
+    overflow-y: scroll;
+  }
+  .post-container {
+    flex-flow: column;
+  }
+}
