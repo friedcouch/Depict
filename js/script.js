@@ -29,7 +29,7 @@ const loadPosts = (userId) => {
             <div class="user-info">
               <span class="canvas-name">${canvas.name}</span><br />
               <div class="like-container">
-                <img src="img/heart.svg">
+                <img class="like" src="img/heart.svg">
                 <span class="like-count">${canvas.like_count}</span>
               </div>
               <a href="other_profile.html"><span class="username">${canvas.user.username}</span></a>
