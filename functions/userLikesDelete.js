@@ -8,7 +8,8 @@ exports.handler = async (event, context) => {
   const response = await supabase
     .from('users_likes')
     .delete()
-    .match({ user_id, canvas_id })
+    .eq('user_id', user_id)
+    .eq('canvas_id', canvas_id)
     .then(res => { 
       if (res.error)
         throw { error: res.error.message }

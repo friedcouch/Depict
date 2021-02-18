@@ -12,7 +12,7 @@ exports.handler = async (event, context) => {
     .eq(canvasId ? 'canvas_id' : '', canvasId) // Get users who liked the canvas with specified canvasId
     .then(res => { 
       if (res.error) throw { error: res.error.message }
-      return res
+      return res.data
     })
     .catch(err => err)
 
