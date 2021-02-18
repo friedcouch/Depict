@@ -60,7 +60,6 @@ const showLoginButtons = () => {
   $('#btn-profile').hide()
 }
 
-hideLoginButtons()
 // When the user clicks on the button, open the form
 $('#btn-sign-up').click(_ => {
   signUpFormContainer.show()
@@ -81,12 +80,13 @@ $(signUpForm).submit(event => {
   const email = event.target[1].value
   const password = event.target[2].value
   const confirmpassword = event.target[3].value
-  console.log(email, password, username)
+
   database.userCreate(email, password, username)
     .then(res => {
-      console.log(res)
       if (res.error) throw res.error
       else if (password !== confirmpassword) throw 'Passwords do not match!'
+      localStorage.user = JSON.stringify(res)
+      hideLoginButtons()
       $('#form-sign-up .error').text('')
     })
     .catch(err => $('#form-sign-up .error').text(err))
@@ -99,12 +99,8 @@ $(signInForm).submit(event => {
   database.userGet(email, password)
     .then(res => {
       if (res.error) throw res.error
+      localStorage.user = JSON.stringify(res)
+      hideLoginButtons()
     })
     .catch(err => $('#form-sign-in .error').text(err))
 })
-
-const hideForm = () => {
-  formBg.hide()
-  signUpFormContainer.hide()
-  signInFormContainer.hide()
-}
