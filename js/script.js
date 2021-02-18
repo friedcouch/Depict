@@ -1,5 +1,33 @@
 import * as database from './database.js'
 
+var prevScrollPos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollPos > currentScrollPos) {
+    document.getElementById("header-nav").style.top = "0";
+  } else {
+    document.getElementById("header-nav").style.top = "-80px";
+  }
+  prevScrollPos = currentScrollPos;
+}
+
+// database.userCreate('qwert@ab.c4', '1234', 'qwerty4')
+// .then(data => {
+//   console.log(data)
+//   if (data.error) throw data.error
+// })
+// .catch(err => console.log(err))
+
+database.userBadgesGet(11)
+// database.userBadgesCreate(1, 2)
+// database.request('userLikesCreate', { userId: 2, canvasId: 100 })
+// database.request('userLikesGet', { userId: 1 })
+// database.request('userLikesDelete', { userId: 1, canvasId: 8 })
+  .then(data => {
+    console.log(data)
+    if (data.error) throw data.error
+  })
+  .catch(err => console.log(err))
 // database.canvasCreate('test2', { canvas: 'yes' }, 2)
 //   .then(data => {
 //     console.log(res)

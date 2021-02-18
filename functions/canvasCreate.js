@@ -4,7 +4,7 @@ const supabase = createClient(SUPABASE_URL, process.env.SUPABASE_KEY)
 
 exports.handler = async (event, context) => {
   const { name, image, userId } = JSON.parse(event.body)
-
+  console.log(image)
   const data = await supabase
     .from('canvasses')
     .insert({

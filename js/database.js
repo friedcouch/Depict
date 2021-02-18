@@ -4,7 +4,7 @@ export const userCreate = async (email, password, username) => request('userCrea
 
 // canvasses
 export const canvasCreate = async (name, image, userId) => request('canvasCreate', { name, image, userId })
-export const canvasGet = async (userId) => request('canvasGet', { userId })
+export const canvasGet = async (canvasId, userId) => request('canvasGet', { canvasId, userId })
 export const canvasUpdate = async (canvasId) => request('canvasUpdate', { canvasId })
 export const canvasDelete = async (canvasId) => request('canvasDelete', { canvasId })
 
