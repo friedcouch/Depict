@@ -1,28 +1,58 @@
+@import 'editCanvas.css';
+
+#loader {
+    position: fixed;
+    background-color: rgba(3, 3, 3, 0.3);
+    backdrop-filter: blur(1px);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(2px);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 body {
-    margin: 0 auto;
+    min-height: 100%;
+    margin: 0;
+    width: 100%;
     max-width: 1920px;
     /* font-family: 'Goldman', cursive; */
     font-family: 'Consolas';
-    background-color: #1A1A1D;
+    background-color: #FFF;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    overflow-x: hidden;
 }
 
 html
 {
+    margin: 0;
+    height: 100%;
     --top-spacing: 70px;
-    margin: var(--top-spacing) auto;
+    padding-top: var(--top-spacing);
 }
 
+header, .post, #introduction,
+.create-canvas-container, .form-container {
+    border-radius: 1%;
+    box-shadow: 0 0.25rem 2.5rem rgba(90, 90, 90, 0.4);
+}
 section
 {
     width: 100%;
-    background-color: #666;
+    background-color: #FFF;
 }
 
 /* Header */
 header {
-    width: 100%;
+    width: 90%;
     height: 70px;
-    background-color: #111;
+    background-color: #FFF;
     position: fixed;
     top: 0;
     max-width: 1920px;
@@ -42,7 +72,7 @@ header {
 
 .navs {
     float: left;
-    color: #f2f2f2;
+    color: #333;
     text-align: center;
     padding: 25px 25px;
     text-decoration: none;
@@ -61,7 +91,12 @@ header {
     display: none;
 }
 
-form, section {
+section {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.form-container form, section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,18 +107,21 @@ form label {
     font-size: 18px;
 }
 
-.form-container {
+.form-container, .create-canvas-container {
     top: 50%;
     transform: translateY(-50%);
-    border-radius: 20px;
-    width: 60%;
-    background-color: #222;
+    width: 40%;
+    background-color: #f8f8f8;
     padding: 1em;
     padding-top: 0.4em;
-    color: #FFF;
+    color: #30323d;
 }
 
-#form-bg, .form-container {
+.create-canvas-container {
+    width: 80%;
+}
+
+#form-bg, .form-container, .create-canvas-container{
     display: none; /* Initialy hidden */
     position: fixed;
 }
@@ -94,8 +132,8 @@ form label {
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+    background-color: rgb(200, 200, 200); /* Fallback color */
+    background-color: rgba(200, 200, 200, 0.8); /* Black w/ opacity */
 }
 
 /* The Close Button */
@@ -112,26 +150,24 @@ form label {
     cursor: pointer;
 }
 
-/* body1 */
-#body1 {
+/* introduction */
+#introduction {
     width: 100%;
-    height: 700px;
-    background-color: #1A1A1D;
-    color: #950740;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
+    margin: 5% 0 2% 0;
 }
 
-#body1 p{
-    color: #6F2232;
+#introduction p {
     font-size: 20px;
-    width: 40%;
+    width: 80%;
     text-align: center;
 }
 
-#body1 h3{
+#introduction h3 {
     font-size: 35px;
 }
 
@@ -139,19 +175,20 @@ form label {
     display: flex;
     flex-flow: row wrap;
     width: 100%;
+    justify-content: space-evenly;
 }
 
 .post {
-    width: 47%;
-    margin: 1.5%;
+    width: 25%;
+    margin: 4%;
 }
 .post * {
-    color: #fff;
+    color: black;
 }
 
 .canvas-container svg {
     width: 100%;
-    height: auto
+    height: auto;
 }
 
 .canvas-name {
@@ -163,16 +200,34 @@ form label {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    padding: 0.5em;
+    border-top: solid 1px #222;
+}
+
+.user-info span {
+    width: 90%;
+}
+
+.like-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+}
+
+.like-count {
+    font-size: 1.5em;
+    margin: 0 0.2em;
 }
 
 /* FOOTER */
 footer {
     width: 100%;
-    height: 200px;
-    background-color: #111;
+    background-color: #1A1A1D;
     text-align: center;
-    color: #666;
+    color: #999;
     padding-top: 20px;
+    border: solid 1px #999;
 }
 
 .fa {
@@ -184,17 +239,33 @@ footer {
     margin: 0 10px;
     border-radius: 50%;
     background: #666;
-    color: #111;
+    color: #FFF;
 }
 
 .fa:hover {
     opacity: 0.7;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1200px) {
+    header {
+        width: 100%;
+    }
+
+    .post {
+        width: 42%;
+        margin: 6% 4%;
+    }
+}
+
+@media only screen and (max-width: 720px) {
     footer {
         width: 100%;
         height: auto;
         padding-bottom: 5px;
+    }
+
+    .post {
+        width: 90%;
+        margin: 10% 5%;
     }
 }

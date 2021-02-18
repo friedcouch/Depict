@@ -1,118 +1,10 @@
-body
-{
-	margin: 0 auto;
-    font-family: 'Goldman', cursive;
-    max-width: 1920px;
-    color: #FFF;
-}
-
-html
-{
-    --top-spacing: 70px;
-    margin: var(--top-spacing) auto;
-}
-
-/* Header */
-header {
-    width: 100%;
-    height: 70px;
-    background-color: #111;
-    position: fixed;
-    top: 0;
-    max-width: 1920px;
-    transition: top 0.3s;
-}
-
-#nav img {
-    float: left;
-    width: 125px;
-    height: 70px;
-}
-
-#nav {
-    width: 100%;
-    height: 70px;
-}
-
-.navs {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 25px 25px;
-    text-decoration: none;
-    font-size: 15px;
-}
-
-#nav .navs:hover {
-    border-bottom: 1px solid #41C6FF;
-}
-
-#btn-sign-in, #btn-sign-up, #profile {
-    float: right;
-}
-
-form, section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-form label {
-    font-size: 18px;
-}
-
-.form-container {
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 20px;
-    width: 60%;
-    background-color: #222;
-    padding: 1em;
-    padding-top: 0.4em;
-    color: #FFF;
-}
-
-#form-bg, .form-container {
-    display: none; /* Initialy hidden */
-    position: fixed;
-}
-
-/* Form background */
-#form-bg {
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
-}
-
-/* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover, .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.body1
-{
-    width: 100%;
-    height: auto;
-    background-color: #333;
-}
+@import 'index.css';
 
 .profile
 {
     width: 100%;
     height: auto;
+    margin-top: 2%;
 }
 
 .usericon
@@ -129,7 +21,7 @@ form label {
     height: 175px;
 }
 
-.username
+#username
 {
     width: 100%;
     height: 50px;
@@ -139,7 +31,7 @@ form label {
     font-size: 30px;
 }
 
-.totallikes
+#total-likes
 {
     width: 100%;
     height: 50px;
@@ -147,12 +39,6 @@ form label {
     justify-content: center;
     align-items: center;
     font-size: 25px;
-}
-
-.badges-container
-{
-    width: 100%;
-    height: auto;
 }
 
 .title
@@ -163,126 +49,4 @@ form label {
     justify-content: center;
     align-items: center;
     font-size: 30px;
-}
-
-.badges
-{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.canvascontainer
-{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.canvastitle
-{
-    width: 100%;
-    height: 75px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.canvas-row
-{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.cardbox
-{
-    width: 20%;
-    height: 550px;
-    background-color: #555;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
-    padding: 10px;
-    box-shadow: 5px 10px 18px #2A2A2D;
-    flex: 0 0 24%;
-}
-
-.canvas
-{
-    width: 100%;
-    height: 500px;
-}
-
-.information
-{
-    width: 100%;
-    height: 50px;
-}
-
-
-
-/*FOOTER*/
-footer
-{
-	width: 100%;
-	height: 200px;
-	background-color: #111;
-	text-align: center;
-	color: #666;
-	padding-top: 20px;
-}
-
-.fa 
-{
-	padding: 10px;
-	font-size: 30px;
-	width: 15px;
-	text-align: center;
-	text-decoration: none;
-	margin: 0 10px;
-	border-radius: 50%;
-}
-  
-.fa:hover 
-{
-	opacity: 0.7;
-}
-
-.fa-facebook
-{
-	background: #666;
-	color: #111;
-}
-  
-.fa-twitter
-{
-	background: #666;
-	color: #111;
-}
-  
-.fa-youtube 
-{
-	background: #666;
-	color: #111;
-}
-  
-.fa-instagram 
-{
-	background: #666;
-	color: #111;
-}
-
-@media only screen and (max-width: 850px) 
-{
-    footer
-	{
-		width: 100%;
-		height: auto;
-		padding-bottom: 5px;
-    }
 }
