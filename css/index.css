@@ -20,8 +20,7 @@ body {
     margin: 0;
     width: 100%;
     max-width: 1920px;
-    /* font-family: 'Goldman', cursive; */
-    font-family: 'Consolas';
+    font-family: 'Overpass Mono', monospace;
     background-color: #FFF;
     display: flex;
     flex-flow: column;
