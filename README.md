@@ -17,7 +17,7 @@ Command to install packages:
 Command to run the website locally:
 `netlify dev`
 
-* If you decided to `git clone` the repository, you'll need the database key, which is stored in the `.env` file.
+\* If you decided to `git clone` the repository, you'll need the database key, which is stored in the `.env` file.
 
 ## Design Process:
 ### Target Audience
