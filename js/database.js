@@ -1,23 +1,23 @@
 // users
-export const userGet = async (email, password) => request('userGet', { email, password })
-export const userCreate = async (email, password, username) => request('userCreate', { email, password, username })
+const userGet = async (email, password) => request('userGet', { email, password })
+const userCreate = async (email, password, username) => request('userCreate', { email, password, username })
 
 // canvasses
-export const canvasCreate = async (name, image, userId) => request('canvasCreate', { name, image, userId })
-export const canvasGet = async (userId, canvasId) => request('canvasGet', { userId, canvasId })
-export const canvasUpdate = async (canvasId, isLiked) => request('canvasUpdate', { canvasId, isLiked })
-export const canvasDelete = async (canvasId) => request('canvasDelete', { canvasId })
+const canvasCreate = async (name, image, userId) => request('canvasCreate', { name, image, userId })
+const canvasGet = async (userId, canvasId) => request('canvasGet', { userId, canvasId })
+const canvasUpdate = async (canvasId, isLiked) => request('canvasUpdate', { canvasId, isLiked })
+const canvasDelete = async (canvasId) => request('canvasDelete', { canvasId })
 
 // users_likes
-export const userLikesCreate = async (userId, canvasId) => request('userLikesCreate', { userId, canvasId })
-export const userLikesGet = async (userId, canvasId) => request('userLikesGet', { userId, canvasId })
-export const userLikesDelete = async (userId, canvasId) => request('userLikesDelete', { userId, canvasId })
+const userLikesCreate = async (userId, canvasId) => request('userLikesCreate', { userId, canvasId })
+const userLikesGet = async (userId, canvasId) => request('userLikesGet', { userId, canvasId })
+const userLikesDelete = async (userId, canvasId) => request('userLikesDelete', { userId, canvasId })
 
 // users_badges
-export const userBadgesCreate = async (userId, badgeId) => request('userBadgesCreate', { userId, badgeId })
-export const userBadgesGet = async (userId) => request('userBadgesGet', { userId })
+const userBadgesCreate = async (userId, badgeId) => request('userBadgesCreate', { userId, badgeId })
+const userBadgesGet = async (userId) => request('userBadgesGet', { userId })
 
-export const request = (path, data) => {
+const request = (path, data) => {
   return fetch(`../.netlify/functions/${path}`, {
     method: 'POST',
     mode: 'cors',
