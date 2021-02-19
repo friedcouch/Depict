@@ -1,9 +1,9 @@
 # Depict
-What is it?
+What is it?\
 A website where users can make random drawings and see others' creations.
 
-[Repository link](https://github.com/friedcouch/Depict)
-[Website link](https://depict.netlify.app)
+[Repository](https://github.com/friedcouch/Depict)\
+[Website](https://depict.netlify.app)
 
 ## Running locally
 To run this project locally, you will need:
