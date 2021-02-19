@@ -1,5 +1,3 @@
-import * as database from './database.js'
-
 $(document).ready(() => {
   $('#loader').show()
   const body = $('body')
@@ -16,7 +14,7 @@ $(document).ready(() => {
 })
 
 const loadPosts = (userId) => {
-  database.canvasGet(userId)
+  canvasGet(userId)
     .then(data => {
       if (data.error) throw data.error
       let totalLikeCount = 0;
@@ -46,7 +44,7 @@ const loadPosts = (userId) => {
         $('#total-likes span').text(0)
 
       if (localStorage.user) {
-        database.userLikesGet(JSON.parse(localStorage.user).user_id)
+        userLikesGet(JSON.parse(localStorage.user).user_id)
           .then(data => {
             if (data.error) throw data.error
             for (const row of data) {
@@ -137,7 +135,7 @@ $(signUpForm).submit(event => {
   const password = event.target[2].value
   const confirmpassword = event.target[3].value
 
-  database.userCreate(email, password, username)
+  userCreate(email, password, username)
     .then(res => {
       if (res.error) throw res.error
       else if (password !== confirmpassword) throw 'Passwords do not match!'
@@ -152,7 +150,7 @@ $(signInForm).submit(event => {
   event.preventDefault()
   const email = event.target[0].value
   const password = event.target[1].value
-  database.userGet(email, password)
+  userGet(email, password)
     .then(res => {
       if (res.error) throw res.error
       localStorage.user = JSON.stringify(res)
@@ -183,13 +181,13 @@ $('#canvasses').on('click', '.like', event => {
   $(post).data('isLiked', isLiked)
 
   let action = isLiked
-    ? database.userLikesCreate(userId, canvasId)
-    : database.userLikesDelete(userId, canvasId)
+    ? userLikesCreate(userId, canvasId)
+    : userLikesDelete(userId, canvasId)
 
   action
     .then(data => {
       if (data.error) throw data.error
-      return database.canvasUpdate(canvasId, isLiked) 
+      return canvasUpdate(canvasId, isLiked) 
     })
     .then(data => {
       if (data.error) throw data.error
@@ -197,7 +195,7 @@ $('#canvasses').on('click', '.like', event => {
         // && !!localStorage.user 
         // && userId === JSON.parse(localStorage.user).user_id
       ) {
-        database.canvasGet(postUserId)
+        canvasGet(postUserId)
           .then(data => {
             if (data.error) throw data.error
             let totalLikeCount = 0;

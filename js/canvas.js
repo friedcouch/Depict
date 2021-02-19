@@ -1,5 +1,3 @@
-import * as database from '../../js/database.js'
-
 // Make an instance of two and place it on the page.
 let elem = document.querySelector('#edit-canvas-container');
 let params = { width: 400, height: 400 };
@@ -65,7 +63,7 @@ $('#canvas-name-form').submit(event => {
   const userId = JSON.parse(localStorage.user).user_id
   if (!userId) window.location.reload()
 
-  database.canvasCreate(name, elem.innerHTML, userId)
+  canvasCreate(name, elem.innerHTML, userId)
     .then(data => {
       if (data.error) throw data.error
       clearSettings()
