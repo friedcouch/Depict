@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/profile.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -39,7 +40,7 @@
                 </div>
 
                 <div id="settings-container">
-                    <form action="" id="canvas-name-form">
+                    <form action="#" id="canvas-name-form">
                         <input id='canvas-name' type="text" placeholder="name" required><br />
                     </form>
                     <div id="btn-settings-subpage-container">
@@ -124,10 +125,10 @@
             </form>
         </div>
         <div class="profile">
-            <div class="usericon"><img src="img/pfp.png"></div>
+            <div class="usericon"><img src="img/pfp.png" alt="PFP"></div>
             <div id="username">username</div>
             <div id="total-likes">
-                <img src="img/heart.svg">
+                <img src="img/heart.svg" alt="like">
                 <span></span>
             </div>
         </div>
@@ -144,8 +145,8 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
     <script src="js/two.js"></script>
-    <script type="module" src="js/script.js" async defer></script>
-    <script type="module" src="js/canvas.js" async defer></script>
+    <script src="js/script.js" async defer></script>
+    <script src="js/canvas.js" async defer></script>
 </body>
 
 </html>
