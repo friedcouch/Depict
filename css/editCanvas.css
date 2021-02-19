@@ -49,6 +49,11 @@
   border-radius: 0;
 }
 
+#btn-settings-subpage-container button:focus {
+  border: none;
+  outline: none;
+}
+
 #btn-path-settings {
   background-color: #f8f8f8;
 }
@@ -105,6 +110,13 @@ button {
   height: fit-content;
 }
 
+button:hover, img.like:hover {
+  cursor: pointer;
+}
+button:hover, button:focus {
+  border: none;
+  outline: none;
+}
 li {
   list-style: none;
   display: flex;

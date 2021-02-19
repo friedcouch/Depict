@@ -41,6 +41,10 @@
     font-size: 25px;
 }
 
+#total-likes span {
+    margin-left: 0.2em
+}
+
 .title
 {
     width: 100%;

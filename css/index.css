@@ -26,6 +26,7 @@ body {
     display: flex;
     flex-flow: column;
     align-items: center;
+    justify-content: space-between;
     overflow-x: hidden;
 }
 
@@ -51,7 +52,7 @@ section
 /* Header */
 header {
     width: 90%;
-    height: 70px;
+    /* height: 70px; */
     background-color: #FFF;
     position: fixed;
     top: 0;
@@ -67,14 +68,13 @@ header {
 
 #nav {
     width: 100%;
-    height: 70px;
 }
 
 .navs {
     float: left;
     color: #333;
     text-align: center;
-    padding: 25px 25px;
+    padding: 2em 1em;
     text-decoration: none;
     font-size: 15px;
 }
@@ -165,6 +165,8 @@ form label {
     font-size: 20px;
     width: 80%;
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 2em;
 }
 
 #introduction h3 {
@@ -201,23 +203,29 @@ form label {
     flex-flow: row wrap;
     justify-content: space-between;
     padding: 0.5em;
-    border-top: solid 1px #222;
+    border-top: solid 1px #ddd;
 }
 
-.user-info span {
-    width: 90%;
+.canvas-name {
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .like-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10%;
+    width: 20%;
+}
+
+.username {
+    width: 100%;
 }
 
 .like-count {
     font-size: 1.5em;
-    margin: 0 0.2em;
+    margin-left: 0.2em;
 }
 
 /* FOOTER */
@@ -258,11 +266,6 @@ footer {
 }
 
 @media only screen and (max-width: 720px) {
-    footer {
-        width: 100%;
-        height: auto;
-        padding-bottom: 5px;
-    }
 
     .post {
         width: 90%;
