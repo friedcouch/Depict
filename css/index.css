@@ -20,7 +20,7 @@ body {
     margin: 0;
     width: 100%;
     max-width: 1920px;
-    font-family: 'Overpass Mono', monospace;
+    font-family: 'Fira Code', monospace;
     background-color: #FFF;
     display: flex;
     flex-flow: column;
