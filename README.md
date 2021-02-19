@@ -2,6 +2,9 @@
 What is it?
 A website where users can make random drawings and see others' creations.
 
+[Repository link](https://github.com/friedcouch/Depict)
+[Website link](https://depict.netlify.app)
+
 ## Running locally
 To run this project locally, you will need:
 1. NodeJS & NPM
@@ -37,8 +40,8 @@ Command to run the website locally:
   - Supabase is an open-source alternative to Google's firebase. It uses an SQL database and Netlify's Gotrue library for authentication.
 8. Netlify
   - Netlify is a platform for hosting static websites, and I have found it to be wayyy faster than Github pages. Additionally, they provide serverless functions, similar to AWS Lambda. I used the serverless functions to communicate with the database and API, without exposing secrets.
-9. PaperJS
-  - The library used to draw on the canvas
+9. TwoJS
+  - The library used to create the svg
 
 ## Testing
 - Index:
