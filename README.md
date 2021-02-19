@@ -13,6 +13,15 @@ Command to install packages:
 
 Command to run the website locally:
 `netlify dev`
+
+## Design Process:
+### Target Audience
+- People who love to explore art and love to create artworks.
+
+### Purpose of Website
+- It is for user to appreciate different kind of artwork that have been done by other creators.
+- It also to allow user to create their own artpiece and show it to others.
+
 ## Technologies used
 1. HTML
   - The mark-up language used to structure content
@@ -30,3 +39,17 @@ Command to run the website locally:
   - Netlify is a platform for hosting static websites, and I have found it to be wayyy faster than Github pages. Additionally, they provide serverless functions, similar to AWS Lambda. I used the serverless functions to communicate with the database and API, without exposing secrets.
 9. PaperJS
   - The library used to draw on the canvas
+
+## Testing
+- Index:
+	- Click on sign up, fill in the details and make sure that when submit its doesnt show any error and successfully creates account.
+	- Click on sign in, fill in account details and make sure that it login successfully.
+	- Once login make sure that there is create canvas and profile navigation link at the menu
+	- After being able to successfully login, click on create canvas and start generating different kind of strokes and name the artwork and make sure that when you click on post it goes through successfully.
+	- Click profile make sure that it goes to profile page and display the correct login account information.
+	- On the canvas posts by other people, click on the creator name and make sure it goes to profile page and display the creator name and artworks.
+	- Once login make sure that when sign out, create canvas and profile navigation link is no longer there.
+	- When login, when u click on the like button on the canvas post it should increase the link by 1, once clicked again it will decrease the like by 1.
+
+	
+
