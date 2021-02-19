@@ -87,9 +87,7 @@ header {
     float: right;
 }
 
-#btn-sign-out, #btn-profile {
-    display: none;
-}
+
 
 section {
     width: 90%;
@@ -127,7 +125,7 @@ form label {
     width: 80%;
 }
 
-#form-bg, .form-container, .create-canvas-container{
+#form-bg, .form-container, .create-canvas-container {
     display: none; /* Initialy hidden */
     position: fixed;
 }
