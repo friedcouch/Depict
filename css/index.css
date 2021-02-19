@@ -107,10 +107,16 @@ form label {
     font-size: 18px;
 }
 
+.username, .email, .password, .confirmpassword {
+    width: 60%;
+    max-width: 180px;
+}
+
 .form-container, .create-canvas-container {
     top: 50%;
     transform: translateY(-50%);
     width: 40%;
+    max-width: 600px;
     background-color: #f8f8f8;
     padding: 1em;
     padding-top: 0.4em;
@@ -219,10 +225,6 @@ form label {
     width: 20%;
 }
 
-.username {
-    width: 100%;
-}
-
 .like-count {
     font-size: 1.5em;
     margin-left: 0.2em;
@@ -266,9 +268,17 @@ footer {
 }
 
 @media only screen and (max-width: 720px) {
-
     .post {
         width: 90%;
         margin: 10% 5%;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .form-container {
+        width: 90%;
+    }
+    .username, .email, .password, .confirmpassword {
+        width: 40%;
     }
 }
