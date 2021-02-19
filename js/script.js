@@ -9,7 +9,7 @@ $(document).ready(() => {
     loadPosts(JSON.parse(localStorage.other_user))
   else if (body.hasClass('canvas'))
     loadPosts()
-  setTimeout(() => $('#loader').hide(), 600)
+  setTimeout(() => $('#loader').hide(), 1000)
 
   if (!!localStorage.user) hideLoginButtons()
   else showLoginButtons()
@@ -27,7 +27,7 @@ const loadPosts = (userId) => {
             <div class="canvas-container">${canvas.image}</div>
             
             <div class="user-info">
-              <span class="canvas-name">${canvas.name}</span><br />
+              <span class="canvas-name">${canvas.name}</span>
               <div class="like-container">
                 <img class="like" src="img/heart.svg">
                 <span class="like-count">${canvas.like_count}</span>
@@ -174,8 +174,13 @@ $('#canvasses').on('click', '.like', event => {
   const post = $(event.target).closest('.post')
   const canvasId = post.data('canvasId')
   const postUserId = post.data('userId') // Post user's id
+  const likeCount = $('.like-count', post).text() * 1
   const isLiked = !(post.data('isLiked')) // Change the value of isLiked
   const userId = JSON.parse(localStorage.user).user_id // Logged in user's id
+
+  $('img', post).attr('src', `img/heart${isLiked ? '_liked' : ''}.svg`)
+  $('.like-count', post).text(isLiked ? likeCount + 1 : likeCount - 1)
+  $(post).data('isLiked', isLiked)
 
   let action = isLiked
     ? database.userLikesCreate(userId, canvasId)
@@ -183,15 +188,11 @@ $('#canvasses').on('click', '.like', event => {
 
   action
     .then(data => {
-      if (data.error) throw '1' + data.error
+      if (data.error) throw data.error
       return database.canvasUpdate(canvasId, isLiked) 
     })
     .then(data => {
       if (data.error) throw data.error
-      $('img', post).attr('src', `img/heart${isLiked ? '_liked' : ''}.svg`)
-      $('.like-count', post).text(data.like_count)
-      $(post).data('isLiked', isLiked)
-
       if ($('body').hasClass('profile') || $('body').hasClass('other-profile')
         // && !!localStorage.user 
         // && userId === JSON.parse(localStorage.user).user_id
