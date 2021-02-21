@@ -17,7 +17,7 @@ Command to install packages:
 Command to run the website locally:
 `netlify dev`
 
-\* If you decided to `git clone` the repository, you'll need the database key, which is stored in the `.env` file.
+\* If you decided to `git clone` the repository, you'll need the database key, which should be stored in a `.env` file.
 
 ## Design Process:
 ### Target Audience
@@ -41,7 +41,10 @@ Command to run the website locally:
 7. Supabase
   - Supabase is an open-source alternative to Google's firebase. It uses an SQL database and Netlify's Gotrue library for authentication.
 8. Netlify
-  - Netlify is a platform for hosting static websites, and I have found it to be wayyy faster than Github pages. Additionally, they provide serverless functions, similar to AWS Lambda. I used the serverless functions to communicate with the database and API, without exposing secrets.
+  - A platform for hosting static websites.
+  - Faster than Github Pages, anecdotally speaking.
+  - Easy to setup; all that is needed is to link the website to a Github repository. Whenever the repository is updated, Netlify will update the website accordingly in around 1-2 minutes.
+  - Easy-to-use Lambda Functions which allows us to create a small API to access our database while keeping our API key a secret.
 9. TwoJS
   - The library used to create the svg
 
