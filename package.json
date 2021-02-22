@@ -4,7 +4,7 @@
   "description": "test\r u gay\r no u",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "netlify dev"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,6 @@
   "homepage": "https://github.com/friedcouch/Depict#readme",
   "dependencies": {
     "@supabase/supabase-js": "^1.3.3",
-    "netlify-cli": "^3.7.1"
+    "netlify-cli": "^3.8.5"
   }
 }
