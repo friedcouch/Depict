@@ -15,7 +15,7 @@ Command to install packages:
 `npm install`
 
 Command to run the website locally:
-`netlify dev`
+`npm run serve`
 
 \* If you decided to `git clone` the repository, you'll need the database key, which should be stored in a `.env` file.
 
