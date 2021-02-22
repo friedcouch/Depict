@@ -11,11 +11,17 @@ To run this project locally, you will need:
 2. Netlify 
 3. SupabaseJS
 
-Command to install packages:
+Move into project folder:
+`cd Depict`
+
+Install packages:
 `npm install`
 
-Command to run the website locally:
+Run the website locally:
 `npm run serve`
+
+If that doesn't work:
+`./node_modules/.bin/netlify dev`
 
 \* If you decided to `git clone` the repository, you'll need the database key, which should be stored in a `.env` file.
 
