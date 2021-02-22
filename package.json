@@ -1,7 +1,7 @@
 {
   "name": "depict",
   "version": "1.0.0",
-  "description": "test\r u gay\r no u",
+  "description": "A website where users can make random drawings and see others' creations.",
   "main": "index.js",
   "scripts": {
     "serve": "netlify dev"
