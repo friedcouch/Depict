@@ -38,13 +38,13 @@ const loadPosts = (userId) => {
       const canvas = data[0]
       if (userId && canvas) {
         $('#total-likes span').text(totalLikeCount)
-      }
-      else 
+        $('#username').text(canvas.user.username)
+      } else 
         $('#total-likes span').text(0)
 
       if (localStorage.user) {
-        const user = JSON.parse(localStorage.user);
-        $('#username').text(user.username)
+        const user = JSON.parse(localStorage.user)
+        !userId && $('#username').text(user.username)
         userLikesGet(user.user_id)
           .then(data => {
             if (data.error) throw data.error
